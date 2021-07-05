@@ -1,4 +1,4 @@
-package longestPalindrome
+package longestpalindrome
 
 // todo: Manacher（马拉车）算法
 // 	https://blog.csdn.net/daidaineteasy/article/details/86238047

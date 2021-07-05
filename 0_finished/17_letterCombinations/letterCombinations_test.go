@@ -1,4 +1,4 @@
-package letterCombinations
+package lettercombinations
 
 import (
 	"reflect"

@@ -1,4 +1,4 @@
-package findMedianSortedArrays
+package findmediansortedarrays
 
 func findMedianSortedArraysLearn(nums1 []int, nums2 []int) float64 {
 	n, m := len(nums1), len(nums2)
@@ -25,8 +25,6 @@ func median(nums1 []int, begin1, end1 int, nums2 []int, begin2, end2, k int) int
 	i, j := begin1+min(len1, k/2)-1, begin2+min(len2, k/2)-1
 	if nums1[i] > nums2[j] {
 		return median(nums1, begin1, end1, nums2, j+1, end2, k-min(len2, k/2))
-	} else {
-		return median(nums1, i+1, end1, nums2, begin2, end2, k-min(len1, k/2))
 	}
-
+	return median(nums1, i+1, end1, nums2, begin2, end2, k-min(len1, k/2))
 }

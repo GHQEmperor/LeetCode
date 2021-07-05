@@ -1,4 +1,4 @@
-package letterCombinations
+package lettercombinations
 
 /*
 17. 电话号码的字母组合

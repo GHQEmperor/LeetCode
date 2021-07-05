@@ -1,4 +1,4 @@
-package findMedianSortedArrays
+package findmediansortedarrays
 
 /*
 	每次删除 k/2		 k = k - min(k/2,oneLen).
@@ -31,9 +31,9 @@ func getKth(nums1, nums2 []int, start1, end1, start2, end2, k int) int {
 
 	if nums1[i] > nums2[j] {
 		return getKth(nums1, nums2, start1, end1, j+1, end2, k-min(len2, k/2))
-	} else {
-		return getKth(nums1, nums2, i+1, end1, start2, end2, k-min(len1, k/2))
 	}
+	return getKth(nums1, nums2, i+1, end1, start2, end2, k-min(len1, k/2))
+
 }
 
 func min(v1, v2 int) int {

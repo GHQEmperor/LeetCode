@@ -1,4 +1,4 @@
-package findMedianSortedArrays
+package findmediansortedarrays
 
 import "testing"
 
