@@ -64,10 +64,7 @@ func isValid(s string) bool {
 			return false
 		}
 	}
-	if len(stack) == 0 {
-		return true
-	}
-	return false
+	return len(stack) == 0
 }
 
 func delTop(l []byte) []byte {

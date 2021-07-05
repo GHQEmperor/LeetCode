@@ -54,23 +54,3 @@ func slide(s string) int {
 	}
 	return sum
 }
-
-func gang(s string) int {
-	sLen := len(s)
-	var maxLen int
-	for i := 0; i < sLen; i++ {
-		var forMaxLen int
-		forMap := make(map[byte]struct{})
-		for j := i; j < sLen; j++ {
-			if _, ok := forMap[s[j]]; ok {
-				break
-			}
-			forMaxLen++
-			forMap[s[j]] = struct{}{}
-		}
-		if maxLen < forMaxLen {
-			maxLen = forMaxLen
-		}
-	}
-	return maxLen
-}

@@ -127,9 +127,7 @@ func check(now *Node, str string, idx int) bool {
 		return now.End
 	}
 	list := now.Children['.']
-	for _, v := range now.Children[str[idx]] {
-		list = append(list, v)
-	}
+	list = append(list, now.Children[str[idx]]...)
 	for _, v := range list {
 		r := check(v, str, idx+1)
 		if r {
