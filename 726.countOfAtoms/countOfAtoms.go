@@ -1,4 +1,4 @@
-package _726_countofatoms
+package countofatoms
 
 /*
 726. 原子的数量
