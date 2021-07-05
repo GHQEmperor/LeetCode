@@ -1,5 +1,7 @@
 package countofatoms
 
+import "strconv"
+
 /*
 726. 原子的数量
 给定一个化学式formula（作为字符串），返回每种原子的数量。
@@ -30,9 +32,43 @@ package countofatoms
 */
 
 func countOfAtoms(formula string) string {
-	if formula == "" {
-		return ""
-	} else {
-		return formula
+
+}
+
+func rec(formula string) (string, map[string]int) {
+	if len(formula) == 0 {
+		return formula, map[string]int{}
 	}
+	count := map[string]int{}
+	var temp []byte
+	for len(formula) != 0 {
+		if formula[0] != '(' && formula[0] != ')' {
+			temp = append(temp, formula[0])
+			formula = formula[1:]
+			if len(formula) != 0 {
+				continue
+			}
+
+		}
+
+		var formulaTemp string
+		countTemp := map[string]int{}
+		if formula[0] == '(' {
+			formulaTemp, countTemp = rec(formula[1:])
+			formula = formulaTemp
+			var num []byte
+			for formula[0] >= '0' && formula[0] <= '9' {
+				num = append(num, formula[0])
+				formula = formula[1:]
+			}
+			n, _ := strconv.Atoi(string(num))
+			for k, v := range countTemp {
+				count[k] += v * n
+			}
+		}
+		if formula[0] == ')' {
+			return formula[1:], map[string]int{}
+		}
+	}
+	return formula, count
 }
