@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package isMatch
 
 /*
 10. 正则表达式匹配
@@ -46,10 +44,6 @@ p = "mis*is*p*."
 输出: false
 */
 
-func main() {
-	fmt.Println(isMatch("mississippi", "mis*is*ip*."))
-}
-
 /*
 动态规划法 本题的dp数组的含义就是：dp[i][j]就是s的前i个元素是否可以被p的前j个元素所匹配。
 我们知道了dp数组的含义之后就知道了dp数组的几个细节：
@@ -93,9 +87,6 @@ func isMatch(s string, p string) bool {
 			}
 		}
 	}
-	//for _, v := range dp {
-	//	fmt.Println(v)
-	//}
 
 	return bool(dp[sLen][pLen])
 }

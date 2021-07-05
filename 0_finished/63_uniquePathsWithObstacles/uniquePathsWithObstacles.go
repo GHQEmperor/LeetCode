@@ -1,4 +1,4 @@
-package main
+package uniquePathsWithObstacles
 
 import "fmt"
 
@@ -60,7 +60,6 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 			dp[0][i] = 0
 		}
 	}
-	print2(dp)
 
 	for i := 1; i < m; i++ {
 		for j := 1; j < n; j++ {
@@ -72,19 +71,4 @@ func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 		}
 	}
 	return dp[m-1][n-1]
-}
-
-func print2(v [][]int) {
-	for _, row := range v {
-		for _, value := range row {
-			fmt.Printf("%d\t", value)
-			//if value {
-			//	fmt.Printf("√\t")
-			//} else {
-			//	fmt.Printf("×\t")
-			//}
-		}
-		fmt.Println()
-	}
-	fmt.Println()
 }

@@ -1,4 +1,4 @@
-package main
+package isMatch
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 
 // todo: 有限状态机 未研究
 func main() {
-	fmt.Println(isMatch("aab", "c*a*b"))
+	fmt.Println(isMatchDalao("aab", "c*a*b"))
 }
 
 func debug(v ...interface{}) {
@@ -28,7 +28,7 @@ func toString(i interface{}) string {
 	}
 }
 
-func isMatch(s string, p string) bool {
+func isMatchDalao(s string, p string) bool {
 	begin := new(Node)
 	begin.C = '>'
 	begin.Size = generatePattern(begin, p, 0)

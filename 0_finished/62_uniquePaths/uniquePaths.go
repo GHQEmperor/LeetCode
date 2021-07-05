@@ -1,11 +1,4 @@
-package main
-
-import "fmt"
-
-type param struct {
-	m, n int
-	r    int
-}
+package uniquePaths
 
 /*
 62. 不同路径
@@ -29,16 +22,6 @@ type param struct {
 1 <= m, n <= 100
 题目数据保证答案小于等于 2 * 10 ^ 9
 */
-
-func main() {
-	test := []param{
-		{3, 2, 3},
-		{3, 7, 28},
-	}
-	for _, v := range test {
-		fmt.Println(uniquePaths(v.m, v.n), v.r)
-	}
-}
 
 func uniquePaths(m int, n int) int {
 	dp := make([][]int, m)

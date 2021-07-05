@@ -1,11 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	//fmt.Println(1 << 31)
-	fmt.Println(divide(5, 2))
-}
+package divide
 
 /*
 29. 两数相除

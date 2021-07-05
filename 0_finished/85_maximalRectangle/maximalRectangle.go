@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package maximalRectangle
 
 /*
 85. 最大矩形
@@ -18,37 +14,6 @@ import (
 ]
 输出: 6
 */
-
-func main() {
-	test := [][][]byte{
-		//{
-		//	{'1', '0', '1', '0', '0'},
-		//	{'1', '0', '1', '1', '1'},
-		//	{'1', '1', '1', '1', '1'},
-		//	{'1', '0', '0', '1', '0'},
-		//},
-		//{
-		//	{'1'},
-		//},
-		//{
-		//	{'0'},
-		//},
-		//{
-		//	{'0', '1'},
-		//},
-		{
-			{'0', '1', '1', '0', '1'},
-			{'1', '1', '0', '1', '0'},
-			{'0', '1', '1', '1', '0'},
-			{'1', '1', '1', '1', '0'},
-			{'1', '1', '1', '1', '1'},
-			{'0', '0', '0', '0', '0'},
-		},
-	}
-	for _, v := range test {
-		fmt.Println(maximalRectangle(v))
-	}
-}
 
 func maximalRectangle(matrix [][]byte) int {
 	n := len(matrix)
@@ -84,21 +49,12 @@ func maximalRectangle(matrix [][]byte) int {
 		return max
 	}
 
-	//dp := make([][]int, n+1)
 	l2, l1 := make([]int, m), make([]int, m)
-	//for i := range dp {
-	//	dp[i] = make([]int, m)
-	//}
-
-	//for i := 0; i < m; i++ {
-	//	dp[0][i] = 0
-	//}
 	var max int
 	for i := 1; i <= n; i++ {
 		for j := 0; j < m; j++ {
 			if matrix[i-1][j] != '0' {
 				l1[j] = l2[j] + 1
-				//dp[i][j] = dp[i-1][j] + 1
 			} else {
 				l1[j] = 0
 			}
@@ -106,7 +62,6 @@ func maximalRectangle(matrix [][]byte) int {
 
 		var lineMax int
 		for k := 0; k < m; k++ {
-			//height := dp[i][k]
 			height := l1[k]
 			for l := k; l < m; l++ {
 				if l1[l] == 0 {
@@ -114,14 +69,12 @@ func maximalRectangle(matrix [][]byte) int {
 				}
 				height = getMin(height, l1[l])
 				lineMax = getMax(lineMax, (l-k+1)*height)
-				fmt.Println("i:", i, "k:", k, "l:", l, "lineMax:", lineMax, "dp[i][k]:", l1[k], "dp[i][l]", l1[l])
 			}
 		}
 		max = getMax(max, lineMax)
 		l2, l1 = l1, l2
 	}
 
-	//tools.PrintSlice(dp)
 	return max
 }
 

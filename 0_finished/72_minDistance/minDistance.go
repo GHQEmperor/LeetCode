@@ -1,4 +1,4 @@
-package main
+package minDistance
 
 import "fmt"
 
@@ -61,7 +61,6 @@ func minDistance(word1 string, word2 string) int {
 			}
 		}
 	}
-	print2(dp)
 	return dp[n][m]
 }
 
@@ -74,14 +73,4 @@ func min(v1, v2, v3 int) int {
 		v = v3
 	}
 	return v
-}
-
-func print2(v [][]int) {
-	for _, row := range v {
-		for _, value := range row {
-			fmt.Printf("%d\t", value)
-		}
-		fmt.Println()
-	}
-	fmt.Println()
 }

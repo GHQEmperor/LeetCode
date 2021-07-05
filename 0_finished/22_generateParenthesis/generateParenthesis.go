@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(generateParenthesis(3))
-}
+package generateParenthesis
 
 /*
 22. 括号生成

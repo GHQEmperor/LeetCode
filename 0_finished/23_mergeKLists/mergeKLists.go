@@ -1,44 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	l := mergeKLists([]*ListNode{
-		{
-			Val: 1,
-			Next: &ListNode{
-				Val: 4,
-				Next: &ListNode{
-					Val:  5,
-					Next: nil,
-				},
-			},
-		},
-		{
-			Val: 1,
-			Next: &ListNode{
-				Val: 3,
-				Next: &ListNode{
-					Val:  4,
-					Next: nil,
-				},
-			},
-		},
-		//nil, nil,
-		{
-			Val: 2,
-			Next: &ListNode{
-				Val:  6,
-				Next: nil,
-			},
-		},
-	})
-
-	for l != nil {
-		fmt.Println(l.Val)
-		l = l.Next
-	}
-}
+package mergeKLists
 
 type ListNode struct {
 	Val  int

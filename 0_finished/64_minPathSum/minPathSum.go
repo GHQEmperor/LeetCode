@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package minPathSum
 
 /*
 64. 最小路径和
@@ -16,19 +14,6 @@ import "fmt"
 输出: 7
 解释: 因为路径 1→3→1→1→1 的总和最小。
 */
-
-func main() {
-	test := [][][]int{
-		{
-			{1, 3, 1},
-			{1, 5, 1},
-			{4, 2, 1},
-		},
-	}
-	for _, v := range test {
-		fmt.Println(minPathSum(v))
-	}
-}
 
 func minPathSum(grid [][]int) int {
 	m := len(grid)
@@ -60,7 +45,6 @@ func minPathSum(grid [][]int) int {
 	for i := 1; i < n; i++ {
 		dp[0][i] = dp[0][i-1] + grid[0][i]
 	}
-	print2(dp)
 
 	for i := 1; i < m; i++ {
 		for j := 1; j < n; j++ {
@@ -75,19 +59,4 @@ func min(v1, v2 int) int {
 		return v1
 	}
 	return v2
-}
-
-func print2(v [][]int) {
-	for _, row := range v {
-		for _, value := range row {
-			fmt.Printf("%d\t", value)
-			//if value {
-			//	fmt.Printf("√\t")
-			//} else {
-			//	fmt.Printf("×\t")
-			//}
-		}
-		fmt.Println()
-	}
-	fmt.Println()
 }

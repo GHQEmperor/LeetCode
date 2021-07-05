@@ -1,11 +1,4 @@
-package main
-
-import "fmt"
-
-type Param struct {
-	s, p   string
-	result bool
-}
+package isMatch
 
 /*
 44. 通配符匹配
@@ -48,17 +41,6 @@ p = "a*c?b"
 输入: false
 */
 
-func main() {
-	test := []Param{
-		{"aa", "a", false},
-		//{"", "a", false},
-		{"aabbc", "*ab*c", true},
-	}
-	for _, v := range test {
-		fmt.Println(isMatch(v.s, v.p), v.result)
-	}
-}
-
 func isMatch(s string, p string) bool {
 	ns := len(s)
 	np := len(p)
@@ -75,7 +57,6 @@ func isMatch(s string, p string) bool {
 			dp[i][0] = true
 		}
 	}
-	print2(dp)
 
 	for i := 1; i <= np; i++ {
 		for j := 1; j <= ns; j++ {
@@ -85,21 +66,5 @@ func isMatch(s string, p string) bool {
 			}
 		}
 	}
-	print2(dp)
-	fmt.Println("np:", np+1, "ns:", ns+1)
 	return dp[np][ns]
-}
-
-func print2(v [][]bool) {
-	for _, row := range v {
-		for _, value := range row {
-			if value {
-				fmt.Printf("√\t")
-			} else {
-				fmt.Printf("×\t")
-			}
-		}
-		fmt.Println()
-	}
-	fmt.Println()
 }
