@@ -7,9 +7,6 @@ import (
 )
 
 // todo: 有限状态机 未研究
-func main() {
-	fmt.Println(isMatchDalao("aab", "c*a*b"))
-}
 
 func debug(v ...interface{}) {
 	log.Println(v...)

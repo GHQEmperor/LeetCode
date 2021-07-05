@@ -1,11 +1,5 @@
 package maxArea
 
-import "fmt"
-
-func main() {
-	fmt.Println(maxArea([]int{1, 1}))
-}
-
 /*
 	https://leetcode-cn.com/problems/container-with-most-water/
 */

@@ -1,9 +1,5 @@
 package longestPalindrome
 
-import (
-	"fmt"
-)
-
 // todo: Manacher（马拉车）算法
 // 	https://blog.csdn.net/daidaineteasy/article/details/86238047
 /*
@@ -27,14 +23,8 @@ import (
 当 j - i >= 3，如果 S[i] == S[j] && dp[i+1][j-1] ，则 dp[i][j] 是回文子串，否则不是 。
 */
 
-func main() {
-	fmt.Println(longestPalindrome("bdcabbacdf"))
-}
-
 func longestPalindrome(s string) string {
-	//return function.Dynamic(s)
 	return dynamic(s)
-	//return function.CenterExtension(s)
 }
 
 func dynamic(s string) string {

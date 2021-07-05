@@ -1,7 +1,5 @@
 package minDistance
 
-import "fmt"
-
 /*
 72. 编辑距离
 给定两个单词 word1 和 word2，计算出将 word1 转换成 word2 所使用的最少操作数 。
@@ -26,16 +24,6 @@ enention -> exention (将 'n' 替换为 'x')
 exention -> exection (将 'n' 替换为 'c')
 exection -> execution (插入 'u')
 */
-
-func main() {
-	test := [][]string{
-		{"horse", "ros"},
-		{"sea", "eat"},
-	}
-	for _, v := range test {
-		fmt.Println(minDistance(v[0], v[1]))
-	}
-}
 
 func minDistance(word1 string, word2 string) int {
 	n := len(word1)

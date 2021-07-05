@@ -1,25 +1,5 @@
 package uniquePathsWithObstacles
 
-import "fmt"
-
-func main() {
-	test := [][][]int{
-		{
-			{0, 0, 0},
-			{0, 1, 0},
-			{0, 0, 0},
-		},
-		{
-			{0, 0, 0},
-			{1, 1, 0},
-			{0, 0, 0},
-		},
-	}
-	for _, v := range test {
-		fmt.Println(uniquePathsWithObstacles(v))
-	}
-}
-
 func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	m := len(obstacleGrid)
 	if m == 0 {

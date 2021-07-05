@@ -1,11 +1,5 @@
 package romanToInt
 
-import "fmt"
-
-func main() {
-	fmt.Println(romanToInt("LVIII"))
-}
-
 func romanToInt(s string) int {
 	bytes := []byte(s)
 	bytesLen := len(bytes)

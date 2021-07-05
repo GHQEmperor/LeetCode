@@ -1,7 +1,5 @@
 package climbStairs
 
-import "fmt"
-
 /*
 70. 爬楼梯
 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
@@ -21,15 +19,6 @@ import "fmt"
 2.  1 阶 + 2 阶
 3.  2 阶 + 1 阶
 */
-
-func main() {
-	test := []int{
-		3, 5,
-	}
-	for _, v := range test {
-		fmt.Println(climbStairs(v))
-	}
-}
 
 func climbStairs(n int) int {
 	if n < 3 {
