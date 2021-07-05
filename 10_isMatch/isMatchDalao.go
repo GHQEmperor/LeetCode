@@ -108,13 +108,12 @@ func generatePattern(now *Node, str string, idx int) int {
 	}
 	addParent := now
 	for addParent.Parent != nil {
-		if addParent.Size == 0 {
-			debug(toString(vnow), " -> ", toString(addParent.Parent))
-			addParent.Parent.Append(vnow.C, vnow)
-			addParent = addParent.Parent
-		} else {
+		if addParent.Size != 0 {
 			break
 		}
+		debug(toString(vnow), " -> ", toString(addParent.Parent))
+		addParent.Parent.Append(vnow.C, vnow)
+		addParent = addParent.Parent
 	}
 	return now.Size + ret
 }

@@ -1,4 +1,4 @@
-package romanToInt
+package romantoint
 
 func romanToInt(s string) int {
 	bytes := []byte(s)
@@ -42,7 +42,7 @@ func romanToInt(s string) int {
 				i++
 				num += 4
 			} else {
-				num += 1
+				num++
 			}
 		}
 	}

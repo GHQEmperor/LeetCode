@@ -40,10 +40,8 @@ func divide(dividend int, divisor int) int {
 	if (dividendFlag == 1 && divisorFlag == 1) || (dividendFlag == -1 && divisorFlag == -1) {
 		if result < 2147483648 {
 			return result
-		} else {
-			return 2147483647
 		}
-
+		return 2147483647
 	}
 
 	result = 0 - result

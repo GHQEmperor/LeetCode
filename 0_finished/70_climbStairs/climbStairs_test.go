@@ -1,4 +1,4 @@
-package climbStairs
+package climbstairs
 
 import "testing"
 

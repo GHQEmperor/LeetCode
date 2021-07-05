@@ -6,46 +6,46 @@ import "fmt"
 func PrintSlice(slice interface{}) {
 	switch s := slice.(type) {
 	case []int:
-		_Int(s)
+		_Ints(s)
 	case [][]int:
-		__Int(s)
+		_Int(s)
 	case []byte:
-		_Byte(s)
+		_Bytes(s)
 	case [][]byte:
-		__Byte(s)
+		_Byte(s)
 	case []string:
 		_String(s)
 	case []bool:
-		_Bool(s)
+		_Bools(s)
 	case [][]bool:
-		__Bool(s)
+		_Bool(s)
 	default:
 		panic("don't have this case.")
 	}
 }
 
-func __Int(v [][]int) {
+func _Int(v [][]int) {
 	for i := range v {
-		_Int(v[i])
+		_Ints(v[i])
 	}
 	fmt.Println()
 }
 
-func _Int(v []int) {
+func _Ints(v []int) {
 	for i := range v {
 		fmt.Printf("%d\t", v[i])
 	}
 	fmt.Println()
 }
 
-func __Byte(v [][]byte) {
+func _Byte(v [][]byte) {
 	for i := range v {
-		_Byte(v[i])
+		_Bytes(v[i])
 	}
 	fmt.Println()
 }
 
-func _Byte(v []byte) {
+func _Bytes(v []byte) {
 	for i := range v {
 		fmt.Printf("%c\t", v[i])
 	}
@@ -59,14 +59,14 @@ func _String(v []string) {
 	fmt.Println()
 }
 
-func __Bool(v [][]bool) {
+func _Bool(v [][]bool) {
 	for i := range v {
-		_Bool(v[i])
+		_Bools(v[i])
 	}
 	fmt.Println()
 }
 
-func _Bool(v []bool) {
+func _Bools(v []bool) {
 	for i := range v {
 		if v[i] {
 			fmt.Printf("√\t")

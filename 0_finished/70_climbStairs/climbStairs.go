@@ -1,4 +1,4 @@
-package climbStairs
+package climbstairs
 
 /*
 70. 爬楼梯

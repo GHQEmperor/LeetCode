@@ -1,4 +1,4 @@
-package romanToInt
+package romantoint
 
 import "testing"
 

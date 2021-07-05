@@ -1,4 +1,4 @@
-package isValid
+package isvalid
 
 import "testing"
 

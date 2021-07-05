@@ -46,10 +46,9 @@ func intToRoman(num int) string {
 			result = append(result, 'I')
 			result = append(result, 'V')
 			num -= 4
-		} else {
-			result = append(result, 'I')
-			num -= 1
 		}
+		result = append(result, 'I')
+		num -= 1
 	}
 	return string(result)
 }
