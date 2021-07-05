@@ -1,4 +1,4 @@
-package uniquePathsWithObstacles
+package uniquepathswithobstacles
 
 func uniquePathsWithObstacles(obstacleGrid [][]int) int {
 	m := len(obstacleGrid)

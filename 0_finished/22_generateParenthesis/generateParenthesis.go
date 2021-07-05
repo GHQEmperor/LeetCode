@@ -1,4 +1,4 @@
-package generateParenthesis
+package generateparenthesis
 
 /*
 22. 括号生成

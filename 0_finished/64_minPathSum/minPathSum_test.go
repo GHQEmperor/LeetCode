@@ -1,4 +1,4 @@
-package minPathSum
+package minpathsum
 
 import "testing"
 

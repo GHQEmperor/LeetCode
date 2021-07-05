@@ -1,4 +1,4 @@
-package isMatch
+package ismatch
 
 /*
 44. 通配符匹配

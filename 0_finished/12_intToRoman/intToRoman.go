@@ -1,4 +1,4 @@
-package intToRoman
+package inttoroman
 
 func intToRoman(num int) string {
 	var result []byte
@@ -48,7 +48,7 @@ func intToRoman(num int) string {
 			num -= 4
 		}
 		result = append(result, 'I')
-		num -= 1
+		num--
 	}
 	return string(result)
 }

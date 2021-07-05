@@ -1,4 +1,4 @@
-package hammingWeight
+package hammingweight
 
 import "testing"
 

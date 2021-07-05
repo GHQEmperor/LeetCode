@@ -1,4 +1,4 @@
-package minDistance
+package mindistance
 
 /*
 72. 编辑距离

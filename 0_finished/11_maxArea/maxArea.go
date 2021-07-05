@@ -1,4 +1,4 @@
-package maxArea
+package maxarea
 
 /*
 	https://leetcode-cn.com/problems/container-with-most-water/

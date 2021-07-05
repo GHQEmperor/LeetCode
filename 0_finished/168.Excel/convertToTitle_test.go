@@ -1,4 +1,4 @@
-package _68_Excel
+package _68_excel
 
 import "testing"
 

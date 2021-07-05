@@ -1,4 +1,4 @@
-package __twoSum
+package twosum
 
 import (
 	"reflect"

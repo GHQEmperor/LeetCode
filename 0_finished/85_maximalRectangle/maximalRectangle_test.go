@@ -1,4 +1,4 @@
-package maximalRectangle
+package maximalrectangle
 
 import "testing"
 

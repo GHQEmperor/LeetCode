@@ -1,4 +1,4 @@
-package maxArea
+package maxarea
 
 import "testing"
 

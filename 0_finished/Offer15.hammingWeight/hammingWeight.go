@@ -1,4 +1,4 @@
-package hammingWeight
+package hammingweight
 
 /*
 请实现一个函数，输入一个整数（以二进制串形式），输出该数二进制表示中 1 的个数。

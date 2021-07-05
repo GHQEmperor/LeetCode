@@ -1,4 +1,4 @@
-package _726_countOfAtoms
+package _726_countofatoms
 
 import "testing"
 

@@ -1,4 +1,4 @@
-package uniquePathsWithObstacles
+package uniquepathswithobstacles
 
 import "testing"
 

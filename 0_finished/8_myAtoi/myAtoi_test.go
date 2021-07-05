@@ -1,4 +1,4 @@
-package myAtoi
+package myatoi
 
 import "testing"
 

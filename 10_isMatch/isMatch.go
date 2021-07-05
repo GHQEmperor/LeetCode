@@ -1,4 +1,4 @@
-package isMatch
+package ismatch
 
 /*
 10. 正则表达式匹配

@@ -1,4 +1,4 @@
-package generateParenthesis
+package generateparenthesis
 
 import (
 	"reflect"

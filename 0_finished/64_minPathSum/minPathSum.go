@@ -1,4 +1,4 @@
-package minPathSum
+package minpathsum
 
 /*
 64. 最小路径和

@@ -1,4 +1,4 @@
-package strStr
+package str
 
 import "testing"
 

@@ -1,4 +1,4 @@
-package isPalindrome
+package ispalindrome
 
 func isPalindrome(x int) bool {
 	if x < 0 {

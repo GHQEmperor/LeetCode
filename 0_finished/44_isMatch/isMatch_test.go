@@ -1,4 +1,4 @@
-package isMatch
+package ismatch
 
 import "testing"
 

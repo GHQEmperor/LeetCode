@@ -1,4 +1,4 @@
-package _833_maxIceCream
+package _833_maxicecream
 
 import "testing"
 

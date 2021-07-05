@@ -1,4 +1,4 @@
-package intToRoman
+package inttoroman
 
 import "testing"
 

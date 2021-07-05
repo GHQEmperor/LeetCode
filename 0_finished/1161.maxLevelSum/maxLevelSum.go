@@ -1,4 +1,4 @@
-package _161_maxLevelSum
+package _161_maxLevelsum
 
 import "math"
 

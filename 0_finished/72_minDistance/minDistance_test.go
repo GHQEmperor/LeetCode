@@ -1,4 +1,4 @@
-package minDistance
+package mindistance
 
 import "testing"
 

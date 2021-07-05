@@ -1,4 +1,4 @@
-package strStr
+package str
 
 /*
 实现strStr()函数。

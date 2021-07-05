@@ -1,4 +1,4 @@
-package fourSum
+package foursum
 
 import (
 	"sort"

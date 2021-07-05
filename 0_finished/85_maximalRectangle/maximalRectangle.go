@@ -1,4 +1,4 @@
-package maximalRectangle
+package maximalrectangle
 
 /*
 85. 最大矩形
