@@ -30,5 +30,9 @@ package countofatoms
 */
 
 func countOfAtoms(formula string) string {
-	return formula
+	if formula == "" {
+		return ""
+	} else {
+		return formula
+	}
 }
