@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(letterCombinations("23"))
-}
+package letterCombinations
 
 /*
 17. 电话号码的字母组合

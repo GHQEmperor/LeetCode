@@ -1,12 +1,6 @@
-package main
+package findMedianSortedArrays
 
-import "fmt"
-
-func main() {
-	fmt.Println(findMedianSortedArrays([]int{1, 2}, []int{3, 4}))
-}
-
-func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+func findMedianSortedArraysLearn(nums1 []int, nums2 []int) float64 {
 	n, m := len(nums1), len(nums2)
 	left := (m + n + 1) / 2
 	right := (m + n + 2) / 2
@@ -29,18 +23,10 @@ func median(nums1 []int, begin1, end1 int, nums2 []int, begin2, end2, k int) int
 	}
 
 	i, j := begin1+min(len1, k/2)-1, begin2+min(len2, k/2)-1
-	fmt.Println(i, j)
 	if nums1[i] > nums2[j] {
 		return median(nums1, begin1, end1, nums2, j+1, end2, k-min(len2, k/2))
 	} else {
 		return median(nums1, i+1, end1, nums2, begin2, end2, k-min(len1, k/2))
 	}
 
-}
-
-func min(v1, v2 int) int {
-	if v1 > v2 {
-		return v2
-	}
-	return v1
 }

@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(findMedianSortedArrays([]int{1, 2}, []int{3, 4}))
-}
+package findMedianSortedArrays
 
 /*
 	每次删除 k/2		 k = k - min(k/2,oneLen).

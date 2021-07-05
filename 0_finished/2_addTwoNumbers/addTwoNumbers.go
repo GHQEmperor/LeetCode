@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package addTwoNumbers
 
 /*
 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
@@ -35,35 +31,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func main() {
-	l1 := ListNode{
-		Val: 2,
-		Next: &ListNode{
-			Val: 4,
-			Next: &ListNode{
-				Val:  3,
-				Next: nil,
-			},
-		},
-	}
-	l2 := ListNode{
-		Val: 5,
-		Next: &ListNode{
-			Val: 6,
-			Next: &ListNode{
-				Val:  4,
-				Next: nil,
-			},
-		},
-	}
-	result := addTwoNumbers(&l1, &l2)
-	p := result
-	for p != nil {
-		fmt.Println(p.Val)
-		p = p.Next
-	}
-}
-
 // l1 2->4->3  342
 // l2 5->6->4  465
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
@@ -80,7 +47,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		value := l1Value + l2Value + nextPlus
 		nextPlus = value / 10
 		value = value % 10
-		//fmt.Println(nextPlus)
+
 		if !(l1tail && l2tail && value == 0) {
 			result = addValue(result, value)
 		}

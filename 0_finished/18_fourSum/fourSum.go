@@ -1,13 +1,8 @@
-package main
+package fourSum
 
 import (
-	"fmt"
 	"sort"
 )
-
-func main() {
-	fmt.Println(fourSum([]int{1, 0, -1, 0, -2, 2}, 0))
-}
 
 /*
 18. 四数之和

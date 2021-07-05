@@ -1,13 +1,6 @@
-package main
+package threeSumClosest
 
-import (
-	"fmt"
-	"sort"
-)
-
-func main() {
-	fmt.Println(threeSumClosest([]int{1, 1, 1, 0}, -100))
-}
+import "sort"
 
 /*
 16. 最接近的三数之和

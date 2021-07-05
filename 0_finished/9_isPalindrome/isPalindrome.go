@@ -1,16 +1,6 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(isPalindrome(12321))
-}
+package isPalindrome
 
 func isPalindrome(x int) bool {
-	return yes(x)
-}
-
-func yes(x int) bool {
 	if x < 0 {
 		return false
 	}

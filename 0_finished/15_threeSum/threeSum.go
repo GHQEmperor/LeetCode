@@ -1,15 +1,8 @@
-package main
+package threeSum
 
 import (
-	"fmt"
 	"sort"
 )
-
-func main() {
-	fmt.Println(threeSum([]int{-1, 0, 1, 2, -1, -4}))
-}
-
-// []int{-1, 0, 1, 2, -1, -4}
 
 /*
 15. 三数之和
@@ -31,7 +24,6 @@ func threeSum(nums []int) [][]int {
 	}
 
 	sort.Ints(nums)
-	fmt.Println(nums)
 	var result [][]int
 	if nums[0] > 0 || nums[numsLen-1] < 0 {
 		return result

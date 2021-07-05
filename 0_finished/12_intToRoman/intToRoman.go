@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(intToRoman(1994))
-}
+package intToRoman
 
 func intToRoman(num int) string {
 	var result []byte

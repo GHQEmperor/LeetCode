@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package myAtoi
 
 /*
 8. 字符串转换整数 (atoi)
@@ -41,10 +39,6 @@ import "fmt"
 解释: 数字 "-91283472332" 超过 32 位有符号整数范围。
      因此返回 INT_MIN (−231) 。
 */
-
-func main() {
-	fmt.Printf("%d\n", myAtoi("4193 - with words"))
-}
 
 func myAtoi(s string) int {
 	min, max := -1<<31, 1<<31-1

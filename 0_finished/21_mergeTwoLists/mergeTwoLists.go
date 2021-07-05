@@ -1,40 +1,5 @@
-package main
+package mergeTwoLists
 
-import "fmt"
-
-func main() {
-	l := mergeTwoLists(&ListNode{
-		Val: 1,
-		Next: &ListNode{
-			Val: 2,
-			Next: &ListNode{
-				Val:  4,
-				Next: nil,
-			},
-		}}, &ListNode{
-		Val: 1,
-		Next: &ListNode{
-			Val: 3,
-			Next: &ListNode{
-				Val:  4,
-				Next: nil,
-			},
-		},
-	})
-
-	for l != nil {
-		fmt.Println(l)
-		l = l.Next
-	}
-}
-
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
 type ListNode struct {
 	Val  int
 	Next *ListNode

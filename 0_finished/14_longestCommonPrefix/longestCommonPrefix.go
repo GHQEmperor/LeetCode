@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(longestCommonPrefix([]string{"flower", "flow", "flight"}))
-}
+package longestCommonPrefix
 
 func longestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
