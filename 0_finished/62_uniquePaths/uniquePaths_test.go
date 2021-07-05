@@ -1,4 +1,4 @@
-package uniquePaths
+package uniquepaths
 
 import "testing"
 

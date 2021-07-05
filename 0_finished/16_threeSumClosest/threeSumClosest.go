@@ -1,4 +1,4 @@
-package threeSumClosest
+package threesumclosest
 
 import "sort"
 

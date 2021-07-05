@@ -1,4 +1,4 @@
-package mergeKLists
+package mergeklists
 
 import (
 	"testing"

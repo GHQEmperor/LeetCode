@@ -1,5 +1,6 @@
-package mergeTwoLists
+package mergetwolists
 
+// ListNode 合并两个有序链表
 type ListNode struct {
 	Val  int
 	Next *ListNode

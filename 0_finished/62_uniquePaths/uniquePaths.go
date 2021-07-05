@@ -1,4 +1,4 @@
-package uniquePaths
+package uniquepaths
 
 /*
 62. 不同路径
