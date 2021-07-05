@@ -10,4 +10,4 @@ jobs:
         uses: golangci/golangci-lint-action@v2
         with:
           version: v1.41.1
-          args: --color always -v --exclude-use-default=false --enable=golint -e "Error return value of \.\(\(os\\\.\)\?std\(out\|err\)\\\.\.\*\|\.\*Close\|\.\*Flush\|os\\\.Remove\(All\)\?\|\.\*printf\?\|os\\\.\(Un\)\?Setenv\)\. is not checked" -e (comment on exported (method|function|type|const)|should have( a package)? comment)
+          args: --color always -v --exclude-use-default=false --enable=golint -e "Error return value of \.\(\(os\\\.\)\?std\(out\|err\)\\\.\.\*\|\.\*Close\|\.\*Flush\|os\\\.Remove\(All\)\?\|\.\*printf\?\|os\\\.\(Un\)\?Setenv\)\. is not checked" -e "\(comment on exported \(method\|function\|type\|const\)\|should have\( a package\)\? comment\)"
