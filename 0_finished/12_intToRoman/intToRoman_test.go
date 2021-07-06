@@ -16,7 +16,7 @@ func Test_intToRoman(t *testing.T) {
 			args: args{
 				num: 1994,
 			},
-			want: "MCMXCIV",
+			want: "MICMIXCII",
 		},
 	}
 	for _, tt := range tests {
